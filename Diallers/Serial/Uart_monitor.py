@@ -248,6 +248,7 @@ class SerialDataMonitor(QtWidgets.QWidget):
         self.serialDataHex = QtWidgets.QTextEdit(self)
         self.serialDataHex.setReadOnly(True)
         self.serialDataHex.setFontFamily('Courier New')
+        
 
         self.label = QtWidgets.QLabel('00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F')
         self.label.setFont( QtGui.QFont('Courier New') )
@@ -366,15 +367,14 @@ class DataPacketsManagerQGroupBox(QtWidgets.QGroupBox):
         self.DataPacketsManagerQGroupBox.setObjectName(u"DataPacketsManagerQGroupBox")
         self.DataPacketsManagerQGroupBox.setGeometry(QRect(50, 0, 50, 50))
         self.DataPacketsManagerQGroupBox.setTitle(u"Data packets manager")
-        
+    
         
         self.DataPacketsQCombobox = QtWidgets.QComboBox(self)
         self.DataPacketsQCombobox.addItems([
             'HEX', 'ASCI', 'BIN'
         ])
         
-        self.DataPacketsQCombobox.setCurrentIndex(1)
-        
+        self.DataPacketsQCombobox.setCurrentIndex(0)
         
         
         self.DelimiterQCombobox = QtWidgets.QComboBox(self)
@@ -383,7 +383,6 @@ class DataPacketsManagerQGroupBox(QtWidgets.QGroupBox):
         ])
         self.DelimiterQCombobox.setCurrentIndex(1)
         
-    
         
         
         gridLayout = QtWidgets.QGridLayout(self.DataPacketsManagerQGroupBox)
