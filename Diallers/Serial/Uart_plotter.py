@@ -104,6 +104,13 @@ class MainwindowSerialMonitor(QtWidgets.QMainWindow):
         self.statusText = QtWidgets.QLabel(self)
         self.statusBar().addWidget( self.statusText )
         
+              # Set fixed sizes for the widgets
+        self.uartparamsbox.setFixedSize(200, 200)
+        self.sensorsmanagerbox.setFixedSize(200, 200)
+        self.serialdatasend.setFixedSize(200, 200)
+        # self.sensorsplots.setFixedSize(800,1400)
+        
+        
         # Create a QHBoxLayout for the top widgets
         topLayout = QtWidgets.QHBoxLayout()
         topLayout.addWidget(self.uartparamsbox)
